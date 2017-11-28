@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination 1`] = `
+Object {
+  "activePage": 0,
+  "data": Array [
+    Object {
+      "id": 1,
+      "name": "b",
+    },
+    Object {
+      "id": 2,
+      "name": "a",
+    },
+    Object {
+      "id": 3,
+      "name": "c",
+    },
+  ],
+  "direction": "asc",
+  "goToPage": [Function],
+  "nextPage": [Function],
+  "pages": 1,
+  "prevPage": [Function],
+  "reset": [Function],
+  "setDirection": [Function],
+  "setSortBy": [Function],
+  "sortBy": null,
+  "toggleDirection": [Function],
+}
+`;

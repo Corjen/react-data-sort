@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`initialState 1`] = `
+Object {
+  "activePage": 0,
+  "data": Array [],
+  "direction": "asc",
+  "pages": null,
+  "sortBy": null,
+}
+`;
