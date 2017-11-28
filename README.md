@@ -11,7 +11,7 @@ styling and a simple API.
 
 # This solution
 
-Components with a (render prop)[https://cdb.reacttraining.com/use-a-render-prop-50de598f11ce] like [Downshift](downshift) and React Router's
+Components with a [render prop](https://cdb.reacttraining.com/use-a-render-prop-50de598f11ce) like [Downshift](downshift) and React Router's
 [Route](https://reacttraining.com/react-router/web/api/Route) are gaining popularity. The render prop pattern gives you maximum flexibility
 in the way you render and style your components because the render prop itself doens't render anything.
 
@@ -29,7 +29,7 @@ contributions are very welcome!
 * [Todo](#todo)
 * [License](#license)
 
-# [Installation](#installation)
+# Installation
 
 This modules is distributed via [npm](https://www.npmjs.com/package/react-data-sort). You can install it with npm:
 
@@ -40,7 +40,7 @@ npm install --save react-data-sort
 This package has `react` and `prop-types` as [peerDependencies](https://nodejs.org/en/blog/npm/peer-dependencies/). Make sure to install
 them if you haven't.
 
-# [Usage](usage)
+# Usage
 
 ```javascript
 import Datasort from 'react-data-sort'
@@ -85,7 +85,7 @@ By default, it will return the data in the same order that you've given it. The 
 | 2   | c    |
 | 3   | a    |
 
-# [Props](#props)
+# Props
 
 ## data
 
@@ -109,13 +109,13 @@ By default, it will return the data in the same order that you've given it. The 
 
 Enables pagination functionality and slices your data to the current page.
 
-# [Controlled vs Uncontrolled](#controlled-vs-uncontrolled)
+# Controlled vs Uncontrolled
 
 The internal state manages `direction`, `sortBy` and `activePage`. In some cases, you want to control that state outside the component, for
 example if you use `redux` or `mobx` to manage your state. You can set `direction`, `sortBy` and `active` as props, thus making that part of
 the state 'controlled'.
 
-# [Render Prop Function](#render-prop-function)
+# Render Prop Function
 
 The render prop expects a function and doesn't render anything. It's argument is an object though, with the internal state and a couple of
 actions.
@@ -161,14 +161,14 @@ These are the internal state values
 | sortBy     | `string` / `null` | the current key where the data is sorted by       |
 | direction  | `string`          | the current direction where the data is sorted by |
 
-# [Examples](#examples)
+# Examples
 
-# [TODO](#todo)
+# TODO
 
 * UMD build
 * Search/filter
 * Change the name to something fancier?
 
-# [License](#license)
+# License
 
 MIT
