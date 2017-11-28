@@ -1,6 +1,6 @@
 {
   "name": "react-data-sort",
-  "version": "0.0.0-semantically-released",
+  "version": "0.0.0-development",
   "description": "A React component to sort and paginate data",
   "main": "dist/index.js",
   "scripts": {
@@ -8,11 +8,11 @@
     "prebuild": "rimraf dist",
     "start": "rollup --config",
     "build": "rollup --config",
-    "release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Corjen/react-data-sort.git"
+    "url": "https://github.com/Corjen/react-data-sort.git"
   },
   "keywords": ["react", "data", "sort", "pagination"],
   "author": "Corjen Moll",

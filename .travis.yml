@@ -12,6 +12,6 @@ before_script:
   - npm run test
 script: npm run build
 after_success:
-  - npm run release
+  - npm run semantic-release
 branches:
 only: master
