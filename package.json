@@ -1,6 +1,6 @@
 {
   "name": "react-data-sort",
-  "version": "0.0.0-semantically-released",
+  "version": "0.0.0-development",
   "description": "A React component to sort and paginate data",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -15,7 +15,12 @@
     "type": "git",
     "url": "https://github.com/Corjen/react-data-sort.git"
   },
-  "keywords": ["react", "data", "sort", "pagination"],
+  "keywords": [
+    "react",
+    "data",
+    "sort",
+    "pagination"
+  ],
   "author": "Corjen Moll",
   "license": "MIT",
   "bugs": {
