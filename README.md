@@ -4,7 +4,7 @@ A simple react component that helps you sort and paginate a list of data.
 
 [![GitHub license](https://img.shields.io/github/license/Corjen/react-data-sort.svg)](https://github.com/Corjen/react-data-sort/blob/master/LICENSE.md)
 [![Build Status](https://travis-ci.org/Corjen/react-data-sort.svg?branch=master)](https://travis-ci.org/Corjen/react-data-sort)
-![](https://img.shields.io/badge/size-3.38%20kB-brightgreen.svg) ![](https://img.shields.io/badge/gzip%20size-880%20B-brightgreen.svg)
+![](https://img.shields.io/badge/size-7.19%20kB-brightgreen.svg) ![](https://img.shields.io/badge/gzip%20size-2.02%20kB-brightgreen.svg)
 
 # The problem
 
