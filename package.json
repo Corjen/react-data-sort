@@ -8,13 +8,18 @@
     "prebuild": "rimraf dist",
     "start": "rollup --config",
     "build": "rollup --config",
-    "release": "semantic-release --dry-run"
+    "release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Corjen/react-data-sort.git"
   },
-  "keywords": ["react", "data", "sort", "pagination"],
+  "keywords": [
+    "react",
+    "data",
+    "sort",
+    "pagination"
+  ],
   "author": "Corjen Moll",
   "license": "MIT",
   "bugs": {
@@ -38,6 +43,7 @@
     "eslint-plugin-react": "^7.5.1",
     "eslint-plugin-standard": "^3.0.1",
     "jest": "^21.2.1",
+    "npx": "^9.7.1",
     "prettier": "^1.8.2",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
