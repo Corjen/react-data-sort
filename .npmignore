@@ -4,3 +4,5 @@ coverage
 .eslintrc.js
 .prettierrc
 jest.config.js
+rollup.config.js
+other
