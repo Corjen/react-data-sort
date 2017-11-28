@@ -1,0 +1,18 @@
+sudo: false
+language: node_js
+cache:
+  directories:
+    - ~/.npm
+notifications:
+  email: false
+node_js: '8'
+install: npm install
+before_script:
+  - npm install
+  - cd ..
+script: npm run build
+# after_success:
+#   - npx codecov
+#   - npx -p semantic-release@7 -c "semantic-release pre && npm publish && semantic-release post"
+branches:
+only: master
