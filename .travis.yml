@@ -9,10 +9,9 @@ node_js: '8'
 install: npm install
 before_script:
   - npm install
-  - ls
+  - npm run test
 script: npm run build
-# after_success:
-#   - npx codecov
-#   - npx -p semantic-release@7 -c "semantic-release pre && npm publish && semantic-release post"
+after_success:
+  - npm run release
 branches:
 only: master

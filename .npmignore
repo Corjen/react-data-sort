@@ -1,4 +1,6 @@
 src
+coverage
 .babelrc
 .eslintrc.js
 .prettierrc
+jest.config.js
