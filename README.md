@@ -98,15 +98,15 @@ By default, it will return the data in the same order that you've given it. The 
 
 ## defaultDirection
 
-> `string` | defaults to `desc` | can be `asc' or`desc` This is the direction in which the data is sorted by default.
+> `string` | defaults to `desc` | can be `asc` or `desc` This is the direction in which the data is sorted by default.
 
 ## defaultSortBy
 
-> `string` | defaults to `null` | can be null or an object key in your data array This is the key by which your data is sorted.
+> `string` | defaults to `null` | can be null or an object key in your data array. This is the key by which your data is sorted.
 
 ## itemsPerPage
 
-> `number` | defaults to `10` The number of items to show on one page. Only works of `paginate` prop is `true`.
+> `number` | defaults to `10` The number of items to show on one page. Only works if `paginate` prop is `true`.
 
 ## paginate
 
@@ -122,8 +122,7 @@ the state 'controlled'.
 
 # Render Prop Function
 
-The render prop expects a function and doesn't render anything. It's argument is an object though, with the internal state and a couple of
-actions.
+The render prop expects a function and doesn't render anything. It's argument is an object, with the internal state and a couple of actions.
 
 ```javascript
 <Datasort
@@ -176,6 +175,7 @@ These are the internal state values
 
 * UMD build
 * Search/filter
+* Add helpers for aria labels
 * Change the name to something fancier?
 
 # License
