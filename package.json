@@ -7,7 +7,7 @@
   "scripts": {
     "test": "jest",
     "prebuild": "rimraf dist",
-    "start": "rollup --config",
+    "start": "rollup --config --watch",
     "build": "rollup --config",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
@@ -57,6 +57,7 @@
     "react": "^16.1.1"
   },
   "dependencies": {
-    "lodash.sortby": "^4.7.0"
+    "lodash.sortby": "^4.7.0",
+    "match-sorter": "^2.2.0"
   }
 }
