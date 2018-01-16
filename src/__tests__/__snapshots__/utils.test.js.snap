@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`calculatePages should calculate the right amount of pages 1`] = `"items and itemsPerPage should both be a number"`;
+
+exports[`paginateData should return the unsliced data 1`] = `"activePage and itemsPerPage should both be a number"`;
