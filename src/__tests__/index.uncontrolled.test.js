@@ -109,3 +109,20 @@ test('Reset', () => {
   expect(renderArgs.direction).toEqual('asc')
   expect(renderArgs.sortBy).toBeNull()
 })
+
+test('Search', () => {
+  let renderArgs
+  const renderSpy = jest.fn(args => {
+    renderArgs = { ...args }
+    return null
+  })
+
+  shallow(<DataSort data={data} render={renderSpy} />)
+  renderArgs.search('')
+  expect(renderArgs.searchQuery).toEqual('')
+  expect(renderArgs.data).toEqual(data)
+
+  renderArgs.search('a')
+  expect(renderArgs.searchQuery).toEqual('a')
+  expect(renderArgs.data).toEqual([data[1]])
+})

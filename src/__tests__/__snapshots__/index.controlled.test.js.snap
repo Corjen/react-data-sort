@@ -23,6 +23,8 @@ Object {
   "pages": 1,
   "prevPage": [Function],
   "reset": [Function],
+  "search": [Function],
+  "searchQuery": "",
   "setDirection": [Function],
   "setSortBy": [Function],
   "sortBy": null,

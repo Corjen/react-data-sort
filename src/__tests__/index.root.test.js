@@ -2,18 +2,20 @@ import React from 'react'
 import DataSort from '../'
 import { mount } from 'enzyme'
 
+const data = [{ id: 1, name: 'b' }, { id: 2, name: 'a' }, { id: 3, name: 'c' }]
+
 test('render nothing', () => {
-  const Component = () => <DataSort />
+  const Component = () => <DataSort data={data} />
   expect(mount(<Component />).html()).toBe(null)
 })
 
 test('render prop is null, then render null', () => {
-  const Component = () => <DataSort render={() => null} />
+  const Component = () => <DataSort data={data} render={() => null} />
   expect(mount(<Component />).html()).toBe(null)
 })
 
 test('render fine', () => {
   const Test = () => <div>test</div>
-  const Component = () => <DataSort render={() => <Test />} />
+  const Component = () => <DataSort data={data} render={() => <Test />} />
   expect(() => mount(<Component />)).not.toThrow()
 })

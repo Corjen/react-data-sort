@@ -6,6 +6,7 @@ Object {
   "data": Array [],
   "direction": "asc",
   "pages": null,
+  "searchQuery": "",
   "sortBy": null,
 }
 `;

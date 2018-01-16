@@ -29,6 +29,18 @@ test('Direction & sortBy', () => {
   expect(renderArgs.data).toEqual([data[1], data[0], data[2]])
 })
 
+test('Search query', () => {
+  let searchQuery = 'b'
+  let renderArgs = renderAndReturnArgs({ searchQuery, searchInKeys: ['name'] })
+  expect(renderArgs.searchQuery).toEqual(searchQuery)
+  expect(renderArgs.data).toEqual([data[0]])
+
+  searchQuery = ''
+  renderArgs = renderAndReturnArgs({ searchQuery })
+  expect(renderArgs.searchQuery).toEqual(searchQuery)
+  expect(renderArgs.data).toEqual(data)
+})
+
 function renderAndReturnArgs(props = {}) {
   let renderArgs
   const renderSpy = jest.fn(args => {
