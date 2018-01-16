@@ -114,10 +114,16 @@ By default, it will return the data in the same order that you've given it. The 
 
 Enables pagination functionality and slices your data to the current page.
 
+## searchInKeys
+
+> `array` | defaults to the keys of the first item in `data`
+
+Sets the keys to search in
+
 # Controlled vs Uncontrolled
 
-The internal state manages `direction`, `sortBy` and `activePage`. In some cases, you want to control that state outside the component, for
-example if you use `redux` or `mobx` to manage your state. You can set `direction`, `sortBy` and `active` as props, thus making that part of
+The internal state manages `direction`, `sortBy`, `searchQuery` and `activePage`. In some cases, you want to control that state outside the component, for
+example if you use `redux` or `mobx` to manage your state. You can set `direction`, `sortBy`, `searchQuery` and `active` as props, thus making that part of
 the state 'controlled'.
 
 # Render Prop Function
@@ -133,6 +139,7 @@ The render prop expects a function and doesn't render anything. It's argument is
          activePage,
          pages,
          sortBy,
+         searchQuery,
          // etc..
         }) => (
         // Render jsx stuff here
@@ -153,17 +160,19 @@ You can change the internal state with these actions.
 | gotToPage       | `function(index: number)`     | go to a specific page                                  |
 | setSortBy       | `function(key: string)`       | set the key to sort the data by                        |
 | reset           | `function()`                  | reset to the initial state                             |
+| search          | `function(query: string)`     | search for a query in given data                       |
 
 ## state
 
 These are the internal state values
 
-| property   | type              | description                                       |
-| ---------- | ----------------- | ------------------------------------------------- |
-| activePage | `number`          | the current active page                           |
-| pages      | `number`          | the total amount of pages The current active page |
-| sortBy     | `string` / `null` | the current key where the data is sorted by       |
-| direction  | `string`          | the current direction where the data is sorted by |
+| property    | type              | description                                       |
+| ----------- | ----------------- | ------------------------------------------------- |
+| activePage  | `number`          | the current active page                           |
+| pages       | `number`          | the total amount of pages The current active page |
+| sortBy      | `string` / `null` | the current key where the data is sorted by       |
+| direction   | `string`          | the current direction where the data is sorted by |
+| searchQuery | `string`          | the current search query                          |
 
 # Examples
 
@@ -174,7 +183,6 @@ These are the internal state values
 # TODO
 
 * UMD build
-* Search/filter
 * Add helpers for aria labels
 * Change the name to something fancier?
 
