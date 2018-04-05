@@ -29,28 +29,28 @@
   "homepage": "https://github.com/Corjen/react-data-sort#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
-    "babel-eslint": "^8.0.2",
+    "babel-eslint": "^8.2.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.0",
-    "eslint": "^4.11.0",
+    "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.8.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-node": "^5.2.1",
-    "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-react": "^7.5.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-react": "^7.7.0",
     "eslint-plugin-standard": "^3.0.1",
-    "jest": "^21.2.1",
-    "prettier": "^1.8.2",
-    "react": "^16.1.1",
-    "react-dom": "^16.1.1",
+    "jest": "^22.4.3",
+    "prettier": "^1.11.1",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
     "rimraf": "^2.6.2",
-    "rollup": "^0.52.0",
+    "rollup": "^0.57.1",
     "rollup-plugin-babel": "^3.0.2",
-    "semantic-release": "^8.2.0"
+    "semantic-release": "^15.1.5"
   },
   "peerDependencies": {
     "prop-types": "^15.6.0",
@@ -58,6 +58,6 @@
   },
   "dependencies": {
     "lodash.sortby": "^4.7.0",
-    "match-sorter": "^2.2.0"
+    "match-sorter": "^2.2.1"
   }
 }
