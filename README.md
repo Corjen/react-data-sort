@@ -21,7 +21,7 @@ I've made this component because I was looking for a React table component that 
 styling. I couldn't find it, so I decided to build something myself. This is my first open source React Component, any feedback or
 contributions are very welcome!
 
-> Note: I've you need to render a really large dataset where performance is vital, something like
+> Note: If you need to render a really large dataset where performance is vital, something like
 > [react-virtualized](https://github.com/bvaughn/react-virtualized) is probably a better fit.
 
 # Table of Contents
