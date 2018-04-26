@@ -53,8 +53,8 @@
     "semantic-release": "^15.1.5"
   },
   "peerDependencies": {
-    "prop-types": "^15.6.0",
-    "react": "^16.1.1"
+    "prop-types": "^15.6.1",
+    "react": "^16.3.2"
   },
   "dependencies": {
     "lodash.sortby": "^4.7.0",
