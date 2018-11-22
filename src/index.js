@@ -108,7 +108,7 @@ class DataSort extends React.Component {
     const { direction } = this.isDirectionControlled() ? this.props : this.state
     const { searchQuery } = this.isSearchControlled() ? this.props : this.state
     const { pages } = this.state
-    const keys = this.props.searchInKeys || (data && data.length) ? Object.keys(data[0]) : []
+    const keys = this.props.searchInKeys || ((data && data.length) ? Object.keys(data[0]) : []);
 
     // Search & sort data
     const searched = searchQuery === '' ? data : matchSorter(data, searchQuery, { keys })
