@@ -1,35 +1,19 @@
-const rollupBabel = require('rollup-plugin-babel')
+import typescript from 'rollup-plugin-typescript2'
 
-module.exports = {
-  input: './src/index.js',
+export default {
+  input: './src/react-data-sort.tsx',
   output: [
     {
-      file: './dist/index.cjs.js',
-      format: 'cjs'
+      file: './dist/react-data-sort.cjs.js',
+      format: 'cjs',
+      sourcemap: true
     },
     {
-      file: './dist/index.esm.js',
-      format: 'es'
+      file: './dist/react-data-sort.esm.js',
+      format: 'es',
+      sourcemap: true
     }
   ],
-  exports: 'named',
-  external: ['react', 'prop-types', 'lodash.sortby'],
-  sourcemap: true,
-  plugins: [
-    rollupBabel({
-      babelrc: false,
-      presets: [
-        [
-          'env',
-          {
-            targets: {
-              browsers: ['ie 10', 'ios 7']
-            },
-            modules: false
-          }
-        ]
-      ],
-      plugins: ['transform-class-properties']
-    })
-  ]
+  external: ['react', 'prop-types', 'lodash.sortby', 'match-sorter'],
+  plugins: [typescript()]
 }
