@@ -1,11 +1,11 @@
-import React from 'react'
-import DataSort from '../'
+import * as React from 'react'
+import DataSort from '../react-data-sort'
 import { shallow } from 'enzyme'
 
 const data = [{ id: 1, name: 'b' }, { id: 2, name: 'a' }, { id: 3, name: 'c' }]
 
 test('Pagination', () => {
-  let renderArgs = renderAndReturnArgs()
+  let renderArgs: any = renderAndReturnArgs()
   expect(renderArgs).toMatchSnapshot()
 
   // Render with activePage prop
@@ -18,7 +18,7 @@ test('Pagination', () => {
 })
 
 test('Direction & sortBy', () => {
-  let renderArgs = renderAndReturnArgs({ sortBy: 'id', direction: 'desc' })
+  let renderArgs: any = renderAndReturnArgs({ sortBy: 'id', direction: 'desc' })
   expect(renderArgs.sortBy).toEqual('id')
   expect(renderArgs.direction).toEqual('desc')
   expect(renderArgs.data).toEqual([data[2], data[1], data[0]])
@@ -31,7 +31,7 @@ test('Direction & sortBy', () => {
 
 test('Search query', () => {
   let searchQuery = 'b'
-  let renderArgs = renderAndReturnArgs({ searchQuery, searchInKeys: ['name'] })
+  let renderArgs: any = renderAndReturnArgs({ searchQuery, searchInKeys: ['name'] })
   expect(renderArgs.searchQuery).toEqual(searchQuery)
   expect(renderArgs.data).toEqual([data[0]])
 

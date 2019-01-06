@@ -24,7 +24,7 @@ interface RenderProp {
 
 interface DataSortProps {
   data: any[]
-  render: ({  }: RenderProp) => React.ReactNode
+  render?: ({  }: RenderProp) => React.ReactNode
   paginate?: boolean
   sortBy?: string
   direction?: string

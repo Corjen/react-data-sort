@@ -1,10 +1,10 @@
 import React from 'react'
-import DataSort from '../'
+import DataSort from '../react-data-sort'
 import { shallow } from 'enzyme'
 const data = [{ id: 1, name: 'b' }, { id: 2, name: 'a' }, { id: 3, name: 'c' }]
 
 test('Pagination', () => {
-  let renderArgs
+  let renderArgs!: any
   const renderSpy = jest.fn(args => {
     renderArgs = { ...args }
     return null
@@ -44,7 +44,7 @@ test('Pagination', () => {
 })
 
 test('Set & toggle direction', () => {
-  let renderArgs
+  let renderArgs!: any
   const renderSpy = jest.fn(args => {
     renderArgs = { ...args }
     return null
@@ -77,7 +77,7 @@ test('Set & toggle direction', () => {
 })
 
 test('Sort by & direction', () => {
-  let renderArgs
+  let renderArgs!: any
   const renderSpy = jest.fn(args => {
     renderArgs = { ...args }
     return null
@@ -96,7 +96,7 @@ test('Sort by & direction', () => {
 })
 
 test('Reset', () => {
-  let renderArgs
+  let renderArgs!: any
   const renderSpy = jest.fn(args => {
     renderArgs = { ...args }
     return null
@@ -111,7 +111,7 @@ test('Reset', () => {
 })
 
 test('Search', () => {
-  let renderArgs
+  let renderArgs!: any
   const renderSpy = jest.fn(args => {
     renderArgs = { ...args }
     return null

@@ -12,12 +12,19 @@
     "build": "rollup --config",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/Corjen/react-data-sort.git"
   },
-  "keywords": ["react", "data", "sort", "pagination"],
+  "keywords": [
+    "react",
+    "data",
+    "sort",
+    "pagination"
+  ],
   "author": "Corjen Moll",
   "license": "MIT",
   "bugs": {
@@ -25,12 +32,16 @@
   },
   "homepage": "https://github.com/Corjen/react-data-sort#readme",
   "devDependencies": {
+    "@types/enzyme": "^3.1.15",
+    "@types/enzyme-adapter-react-16": "^1.0.3",
+    "@types/jest": "^23.3.11",
     "@types/lodash.sortby": "^4.7.4",
     "@types/match-sorter": "^2.2.0",
     "@types/react": "^16.7.18",
     "@types/react-dom": "^16.0.11",
     "enzyme": "^3.2.0",
-    "enzyme-adapter-react-16": "^1.1.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "enzyme-to-json": "^3.3.5",
     "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.8.0",
     "eslint-config-standard": "^11.0.0",
@@ -47,6 +58,7 @@
     "rollup": "^0.58.2",
     "rollup-plugin-typescript2": "^0.18.1",
     "semantic-release": "^15.1.5",
+    "ts-jest": "^23.10.5",
     "tslib": "^1.9.3",
     "typescript": "^3.2.2"
   },
