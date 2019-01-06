@@ -30,11 +30,8 @@ test('defaultDirection should set the direction', () => {
 })
 
 test('pagination should be uncontrolled', () => {
-  const wrapper: any = shallow(<DataSort data={data} />)
-  const instance = wrapper.instance()
+  const instance: any = shallow(<DataSort data={data} />).instance()
   expect(instance.isPaginationControlled()).toBeFalsy()
-  // const instance = shallow(<DataSort data={data} />).instance()
-  // expect(instance.isPaginationControlled()).toBeFalsy()
 })
 
 test('pagination should be controlled', () => {

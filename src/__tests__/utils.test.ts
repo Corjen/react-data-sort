@@ -40,6 +40,6 @@ describe('paginateData', () => {
     expect(paginateData(data, 0, 2)).toEqual([data[0], data[1]])
   })
   it('should return the unsliced data', () => {
-    expect(paginateData(data, 0, 1)).toEqual([data[0]])
+    expect(paginateData(data, 0, data.length)).toEqual(data)
   })
 })

@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import DataSort from '../react-data-sort'
 import { shallow } from 'enzyme'
 
