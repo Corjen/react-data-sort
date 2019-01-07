@@ -34,30 +34,31 @@
   "devDependencies": {
     "@types/enzyme": "^3.1.15",
     "@types/enzyme-adapter-react-16": "^1.0.3",
-    "@types/jest": "^23.3.11",
+    "@types/jest": "^23.3.12",
     "@types/lodash.sortby": "^4.7.4",
     "@types/match-sorter": "^2.2.0",
     "@types/react": "^16.7.18",
     "@types/react-dom": "^16.0.11",
-    "enzyme": "^3.2.0",
+    "cz-conventional-changelog": "2.1.0",
+    "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
     "enzyme-to-json": "^3.3.5",
-    "eslint": "^4.19.1",
-    "eslint-config-prettier": "^2.8.0",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-import": "^2.10.0",
+    "eslint": "^5.12.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-promise": "^3.7.0",
-    "eslint-plugin-react": "^7.7.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "jest": "^22.4.3",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.12.3",
+    "eslint-plugin-standard": "^4.0.0",
+    "jest": "^23.6.0",
     "prettier": "^1.11.1",
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1",
-    "rimraf": "^2.6.2",
-    "rollup": "^0.58.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.0.2",
     "rollup-plugin-typescript2": "^0.18.1",
-    "semantic-release": "^15.1.5",
+    "semantic-release": "^15.13.2",
     "ts-jest": "^23.10.5",
     "tslib": "^1.9.3",
     "typescript": "^3.2.2"
@@ -69,5 +70,10 @@
   "dependencies": {
     "lodash.sortby": "^4.7.0",
     "match-sorter": "^2.2.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
