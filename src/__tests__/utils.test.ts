@@ -6,8 +6,6 @@ describe('calculatePages', () => {
     expect(calculatePages(20, 4)).toEqual(5)
     expect(calculatePages(10, 3)).toEqual(4)
     expect(calculatePages(1, 10)).toEqual(1)
-    const testError = () => calculatePages('1', '10')
-    expect(testError).toThrowErrorMatchingSnapshot()
   })
 })
 
@@ -42,7 +40,6 @@ describe('paginateData', () => {
     expect(paginateData(data, 0, 2)).toEqual([data[0], data[1]])
   })
   it('should return the unsliced data', () => {
-    const testError = () => paginateData(data, '0', '1')
-    expect(testError).toThrowErrorMatchingSnapshot()
+    expect(paginateData(data, 0, data.length)).toEqual(data)
   })
 })

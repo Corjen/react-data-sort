@@ -1,5 +1,5 @@
 import React from 'react'
-import DataSort from '../'
+import DataSort from '../react-data-sort'
 import { mount } from 'enzyme'
 
 const data = [{ id: 1, name: 'b' }, { id: 2, name: 'a' }, { id: 3, name: 'c' }]

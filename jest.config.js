@@ -1,4 +1,10 @@
-const config = {}
-config.setupFiles = ['<rootDir>/other/setup-tests.js']
-
-module.exports = config
+module.exports = {
+  roots: ['<rootDir>/src'],
+  transform: {
+    '^.+\\.tsx?$': 'ts-jest'
+  },
+  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$',
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  snapshotSerializers: ['enzyme-to-json/serializer'],
+  setupTestFrameworkScriptFile: '<rootDir>/other/setupEnzyme.ts'
+}

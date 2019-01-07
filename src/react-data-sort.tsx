@@ -1,9 +1,52 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import * as React from 'react'
+import * as PropTypes from 'prop-types'
 import matchSorter from 'match-sorter'
 import { calculatePages, sortData, paginateData } from './utils'
 
-class DataSort extends React.Component {
+type Direction = 'asc' | 'desc'
+
+interface RenderProp {
+  data: any[]
+  activePage: number
+  pages: number
+  sortBy: string
+  direction: string
+  searchQuery: string
+  toggleDirection: () => void
+  reset: () => void
+  prevPage: () => void
+  nextPage: () => void
+  goToPage: (activePage: number) => void
+  setDirection: (direction: Direction) => void
+  setSortBy: (sortBy: string) => void
+  search: (value: string) => void
+}
+
+interface DataSortProps {
+  data: any[]
+  render?: ({  }: RenderProp) => React.ReactNode
+  paginate?: boolean
+  sortBy?: string
+  direction?: string
+  itemsPerPage?: number
+  activePage?: number
+  defaultSortBy?: string
+  defaultDirection?: string
+  defaultActivePage?: number
+  searchQuery?: string
+  searchInKeys?: any[]
+}
+
+interface DataSortState {
+  sortBy: string | null
+  direction: string
+  pages: number | null
+  activePage: number
+  data: any[]
+  searchQuery: string
+}
+
+class DataSort extends React.Component<DataSortProps, DataSortState> {
   static propTypes = {
     data: PropTypes.array.isRequired,
     render: PropTypes.func,
@@ -17,12 +60,13 @@ class DataSort extends React.Component {
     searchQuery: PropTypes.string,
     searchInKeys: PropTypes.array
   }
+
   static defaultProps = {
-    data: [],
     itemsPerPage: 10,
     paginate: false
   }
-  state = {
+
+  state: DataSortState = {
     sortBy: this.props.defaultSortBy || null,
     direction: this.props.defaultDirection || 'asc',
     pages: null,
@@ -30,24 +74,30 @@ class DataSort extends React.Component {
     data: [],
     searchQuery: ''
   }
+
   componentDidMount() {
     const { itemsPerPage, paginate, data } = this.props
     if (paginate) {
       this.setState({ pages: calculatePages(data.length, itemsPerPage) })
     }
   }
+
   isPaginationControlled() {
     return typeof this.props.activePage !== 'undefined'
   }
+
   isSortByControlled() {
     return typeof this.props.sortBy !== 'undefined'
   }
+
   isDirectionControlled() {
     return typeof this.props.direction !== 'undefined'
   }
+
   isSearchControlled() {
     return typeof this.props.searchQuery !== 'undefined'
   }
+
   reset = () => {
     this.setState({
       sortBy: null,
@@ -55,6 +105,7 @@ class DataSort extends React.Component {
       activePage: 0
     })
   }
+
   prevPage = () => {
     if (this.props.paginate === null) {
       return
@@ -65,6 +116,7 @@ class DataSort extends React.Component {
     }
     this.goToPage(activePage - 1)
   }
+
   nextPage = () => {
     if (this.props.paginate === null) {
       return
@@ -75,7 +127,8 @@ class DataSort extends React.Component {
       this.goToPage(activePage + 1)
     }
   }
-  goToPage = activePage => {
+
+  goToPage = (activePage: number) => {
     if (this.props.paginate === null) {
       return
     }
@@ -84,23 +137,32 @@ class DataSort extends React.Component {
     }
     this.setState({ activePage })
   }
-  setSortBy = sortBy => {
+
+  setSortBy = (sortBy: string) => {
     this.setState({ sortBy })
   }
 
-  setDirection = direction => {
+  setDirection = (direction: Direction) => {
     if (direction === 'asc' || direction === 'desc') {
       this.setState({ direction })
     }
   }
+
   toggleDirection = () => {
     this.setState({
       direction: this.state.direction === 'asc' ? 'desc' : 'asc'
     })
   }
-  search = value => {
+
+  /**
+   * Search dataset with given query
+   *
+   * @param value: string
+   */
+  search = (value: string) => {
     this.setState({ searchQuery: value })
   }
+
   render() {
     const { render, paginate, itemsPerPage, data } = this.props
     const { activePage } = this.isPaginationControlled() ? this.props : this.state
@@ -108,7 +170,7 @@ class DataSort extends React.Component {
     const { direction } = this.isDirectionControlled() ? this.props : this.state
     const { searchQuery } = this.isSearchControlled() ? this.props : this.state
     const { pages } = this.state
-    const keys = this.props.searchInKeys || (data && data.length) ? Object.keys(data[0]) : []
+    const keys = this.props.searchInKeys ? this.props.searchInKeys : Object.keys(data[0])
 
     // Search & sort data
     const searched = searchQuery === '' ? data : matchSorter(data, searchQuery, { keys })
