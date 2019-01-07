@@ -1,17 +1,16 @@
 sudo: false
 language: node_js
-cache:
-  directories:
-    - ~/.npm
+cache: yarn
 notifications:
   email: false
-node_js: '8'
-install: npm install
+node_js: '10'
+install: yarn install
 before_script:
-  - npm install
-  - npm run test
-script: npm run build
+  - yarn install
+  - yarn run test
+script: yarn run build
 after_success:
   - npx semantic-release
 branches:
-only: master
+  only:
+    - master
