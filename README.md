@@ -157,7 +157,7 @@ You can change the internal state with these actions.
 | setDirection    | `function(direction: string)` | set the direction to `asc` or `desc`                   |
 | prevPage        | `function()`                  | go to the previous page (only if `paginate` is true)   |
 | nextPage        | `function()`                  | go to the next page (only if `paginate` is true)       |
-| gotToPage       | `function(index: number)`     | go to a specific page                                  |
+| goToPage        | `function(index: number)`     | go to a specific page                                  |
 | setSortBy       | `function(key: string)`       | set the key to sort the data by                        |
 | reset           | `function()`                  | reset to the initial state                             |
 | search          | `function(query: string)`     | search for a query in given data                       |
