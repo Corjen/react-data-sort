@@ -6,12 +6,12 @@ const data = [{ id: 1, name: 'b' }, { id: 2, name: 'a' }, { id: 3, name: 'c' }]
 
 test('render nothing', () => {
   const Component = () => <DataSort data={data} />
-  expect(mount(<Component />).html()).toBe(null)
+  expect(mount(<Component />).html()).toEqual('')
 })
 
 test('render prop is null, then render null', () => {
   const Component = () => <DataSort data={data} render={() => null} />
-  expect(mount(<Component />).html()).toBe(null)
+  expect(mount(<Component />).html()).toEqual('')
 })
 
 test('render fine', () => {
