@@ -58,7 +58,7 @@
     "rimraf": "^2.6.3",
     "rollup": "^1.16.2",
     "rollup-plugin-typescript2": "^0.21.2",
-    "semantic-release": "^15.13.18",
+    "semantic-release": "^17.2.3",
     "ts-jest": "^24.0.2",
     "tslib": "^1.10.0",
     "typescript": "^3.5.2"
